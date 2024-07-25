@@ -23,3 +23,8 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('createBoard', () =>{
+    cy.get('#number').type(3)
+    cy.get('#start').click()
+})
