@@ -28,3 +28,7 @@ Cypress.Commands.add('createBoard', () =>{
     cy.get('#number').type(3)
     cy.get('#start').click()
 })
+
+Cypress.Commands.add('getPlayerSquare', (squareId) =>{
+    return cy.get(`[id=${squareId}]`)
+  })
