@@ -7,7 +7,7 @@ describe('TIC TAC TOE Tests', () => {
     cy.reload()
   })
 
-  it('Table will appear when value is submitted', ()=>{
+  it('Start a Game - Table will appear when value is submitted', ()=>{
     //Draw back with this test is that it will not cover 
     //if the board is a valid Tic Tac Toe board.   
     //Will need a test to check number of tiles
@@ -16,7 +16,7 @@ describe('TIC TAC TOE Tests', () => {
     cy.get('#table').should('be.visible')
   })
 
-  it('After creating a table, the page can be reset', () => {
+  it('Game Reset - After creating a table, the page can be reset', () => {
     //Checks that we can clear the page to reset for a new game.
     cy.createBoard()
     cy.reload()
@@ -24,14 +24,14 @@ describe('TIC TAC TOE Tests', () => {
     cy.get('#table').should('not.be.visible')
   })
 
-  it('Selecting the First Square Displays an X to Start the Game', () =>{
+  it('First Move - Selecting the First Square Displays an X to Start the Game', () =>{
     //Checks we are starting each game as X consistently for player 1.
     cy.createBoard()
     cy.getPlayerSquare('2').click()
     cy.getPlayerSquare('2').should('have.text', 'X')
   })
 
-  it('Selecting a Second Square Displays an O for the Next Move', ()=>{
+  it('Second Player Move - Selecting a Second Square Displays an O for the Next Move', ()=>{
     //Checks that after the first move, the next move is O for player 2.
     cy.createBoard()
     cy.getPlayerSquare('2').click()
@@ -39,7 +39,7 @@ describe('TIC TAC TOE Tests', () => {
     cy.getPlayerSquare('4').should('have.text', 'O')
   })
 
-  it('Selecting Three Squares for X in a Row Ends the Game', () =>{
+  it('Game Winner - Selecting Three Squares for X in a Row Ends the Game', () =>{
     //Checks that the end game message for a win displays
     //THIS IS A FAILING TEST
     cy.createBoard()
@@ -54,7 +54,7 @@ describe('TIC TAC TOE Tests', () => {
     .should('be.visible')
   })
 
-  it('End Game Banner Should Not Appear if There is No Winner' , () =>{
+  it('Tie Game - End Game Banner Should Not Appear if There is No Winner' , () =>{
     //Checks that if there is no winner, then the end game message is not displayed.
     cy.createBoard()
     //Note to improve with a fuction to run through these ids based on a passed in list
