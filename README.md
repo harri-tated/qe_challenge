@@ -20,3 +20,15 @@ Do not follow these steps without trying to run the application first.  It may w
 -  make sure you have [Node.js](https://nodejs.org/en) installed (current version is Node V22.5.1)
 -  You may need to reinstall the packages if you're on a different operating system -- delete the `node_modules` directory along with `package.json`.  Then do `npm install express`.
 -  if you're using a VPN turn it off or uninstall it altogether.
+
+-  ## Cypress Install
+-  Run `npm install cypress --save-dev` to install Cypress.  Using version 10.7.0.
+
+-  To start Cypress run `npx cypress open`.
+
+-  All tests are in the `e2e/tictactoe_spec.cy.js` file.  Any shared commands can be found in the `support/commands.js` file.
+
+-  ## Additional Documentation
+-  Issues found are tracked on [Review Wave QE Assignment - Harrison T.](https://docs.google.com/document/d/1XnpHHoLdU4S6Hj1XM7LH5iYCQk8B50n0u5pyC-rQ4dg/edit?usp=sharing) in addition to Part 2 of the assignment.
+
+-  Video Walk thru can be found [here]().
