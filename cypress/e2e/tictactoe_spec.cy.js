@@ -18,8 +18,7 @@ describe('TIC TAC TOE Tests', () => {
 
   it('After creating a table, the page can be reset', () => {
     //Checks that we can clear the page to reset for a new game.
-    cy.get('#number').type(3)
-    cy.get('#start').click()
+    cy.createBoard()
     cy.reload()
     cy.get('#number').should('not.have.value')
     cy.get('#table').should('not.be.visible')
