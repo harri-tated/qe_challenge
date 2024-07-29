@@ -7,7 +7,7 @@ describe('TIC TAC TOE Tests', () => {
     cy.reload()
   })
 
-  it.skip('Table will appear when value is entered', ()=>{
+  it('Table will appear when value is submitted', ()=>{
     //Draw back with this test is that it will not cover 
     //if the board is a valid Tic Tac Toe board.   
     //Will need a test to check number of tiles
@@ -16,7 +16,7 @@ describe('TIC TAC TOE Tests', () => {
     cy.get('#table').should('be.visible')
   })
 
-  it.skip('After creating a table, the page can be reset', () => {
+  it('After creating a table, the page can be reset', () => {
     //Checks that we can clear the page to reset for a new game.
     cy.get('#number').type(3)
     cy.get('#start').click()
