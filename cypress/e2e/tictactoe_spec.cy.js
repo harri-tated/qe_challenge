@@ -54,7 +54,7 @@ describe('TIC TAC TOE Tests', () => {
     .should('be.visible')
   })
 
-  it('Banner Should Not Appear if There is No Winner' , () =>{
+  it('End Game Banner Should Not Appear if There is No Winner' , () =>{
     //Checks that if there is no winner, then the end game message is not displayed.
     cy.createBoard()
     //Note to improve with a fuction to run through these ids based on a passed in list
