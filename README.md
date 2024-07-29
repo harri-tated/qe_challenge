@@ -30,4 +30,4 @@ All tests are in the `e2e/tictactoe_spec.cy.js` file.  Any shared commands can b
 -  ## Additional Documentation
 -  Issues found are tracked on [Review Wave QE Assignment - Harrison T.](https://docs.google.com/document/d/1XnpHHoLdU4S6Hj1XM7LH5iYCQk8B50n0u5pyC-rQ4dg/edit?usp=sharing) in addition to Part 2 of the assignment.
 
--  Video Walk thru can be found [here]().
+-  Video Walk thru can be found [here](https://youtu.be/gSdnXeJt6gQ).
